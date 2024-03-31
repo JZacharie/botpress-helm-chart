@@ -26,13 +26,13 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v3
 
-      # Added based on https://github.com/helm/chart-releaser-action/issues/74
-      - name: Add repositories
-        run: |
-          helm repo add moreillon https://maximemoreillon.github.io/helm-repository/
-          helm repo add bitnami https://charts.bitnami.com/bitnami
-          helm repo add influxdata https://helm.influxdata.com/
-          helm repo add neo4j-helm-charts https://neo4j.github.io/helm-charts/
+      # # Added based on https://github.com/helm/chart-releaser-action/issues/74
+      # - name: Add repositories
+      #   run: |
+      #     helm repo add moreillon https://maximemoreillon.github.io/helm-repository/
+      #     helm repo add bitnami https://charts.bitnami.com/bitnami
+      #     helm repo add influxdata https://helm.influxdata.com/
+      #     helm repo add neo4j-helm-charts https://neo4j.github.io/helm-charts/
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
